@@ -14,7 +14,8 @@ def getIMGName(path, suffix):
                 img_dict[os.path.join(root, name)] = name
     return input_template_All, input_template_All_Path, img_dict
 
-path = "/home/dailinhan/C20F656-data/data-fix-equal/tianjin-data/tinajin-data-fix-0514/84/day/84-1/0425-8/image/"
+# path = "/home/dailinhan/C20F656-data/data-fix-equal/tianjin-data/tinajin-data-fix-0514/84/day/84-1/0425-8/image/"
+path = "/home/dailinhan/C20F656-data/data-fix-equal/wuhan-data/wuhan-data-fix-0426/night/wuhan-night-7/image/"
 img_name, img_path, img_dic = getIMGName(path,'.jpg')
 # print(img_name)
 # print(img_path)
@@ -65,6 +66,6 @@ for key in iou_match:
     #     cv2.imshow("a", bgra)
     #     cv2.waitKey()
     #     cv2.destroyAllWindows()
-    cv2.imwrite("/home/wangyuchen/project/clip/" + img_dic[key][:-3] + "png", bgra)
+    cv2.imwrite("/home/wangyuchen/project/clip_wuhan_night/" + img_dic[key][:-3] + "png", bgra)
 # print(whole_iou)
 # print(L.shape)
